@@ -73,6 +73,7 @@ h1 span {
 /* the interactive elements */
 .buttons, .passwords {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -80,8 +81,11 @@ h1 span {
     margin-bottom: 2rem;
 }
 
-.passwords {
-    justify-content: space-between;
+/* layout on bigger screens */
+@media screen and (min-width: 600px) {
+    .buttons, .passwords {
+        flex-wrap: nowrap;
+    }
 }
 
 button, output, input {
