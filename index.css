@@ -11,6 +11,7 @@
  :root {
     --black: #1C1C1C;
     --white: #EFF9F4;
+    --borderRadius: 5px;
  }
 
  /* Light mode - dark mode switch */
@@ -83,9 +84,9 @@ h1 span {
     justify-content: space-between;
 }
 
-button, output {
+button, output, input {
     border: none;
-    border-radius: 5px;
+    border-radius: var(--borderRadius);
     color: var(--white);
     padding: 0.75rem 1.5rem;
     text-align: center;
@@ -104,4 +105,16 @@ output {
     background-color: var(--black);
     color: var(--highlightColor);
     width: 100%;
+}
+
+input {
+    background-color: var(--highlightColor);
+    color: red;
+    width: 50px;
+    /* -webkit-appearance: none; */
+}
+
+#amountDisplay {
+    color: var(--highlightColor);
+    padding: 0.75rem;
 }
