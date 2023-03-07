@@ -17,16 +17,11 @@ amountInput.value = amountDisplay.textContent = passwordLength;
 const passwordsOutputOne = document.getElementById('outputOne');
 const passwordsOutputTwo = document.getElementById('outputTwo');
 
-// clean slate
-function clear() {
-  passwordsOutputOne.innerHTML = passwordsOutputTwo.innerHTML = ''
-};
+// generate random passwords
+passwordsButton.addEventListener('click', showPasswords);
 
-// generate random passwords using addEventListener
-passwordsButton.addEventListener('click', showGeneratedPasswords);
-
-// clear passwords using addEventListener
-clearButton.addEventListener('click', clear);
+// clear passwords
+clearButton.addEventListener('click', clearPasswords);
 
 // update amount of characters using range slider
 amountInput.addEventListener('input', function () {
@@ -40,16 +35,18 @@ function generatePasswords() {
   for (let i = 0; i < passwordLength; i++) {
     password += characters[(Math.floor(Math.random() * characters.length))];
   };
-  console.log(`generatePassword: ${password}`);
   return password;
 };
 
+// clear outputs
+function clearPasswords() {
+  passwordsOutputOne.innerHTML = passwordsOutputTwo.innerHTML = ''
+};
+
 // render generated passwords
-function showGeneratedPasswords() {
+function showPasswords() {
   passwordsOutputOne.textContent = generatePasswords();
-  console.log(`showPassword 1: ${password}`);
   passwordsOutputTwo.textContent = generatePasswords();
-  console.log(`showPassword 2: ${password}`);
 };
 
 
