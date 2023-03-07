@@ -38,16 +38,16 @@ createSubArrays();
 // Code for use on the HTML
 
 // the buttons
-let passwordsButton = document.getElementById('generatePasswords');
+const passwordsButton = document.getElementById('generatePasswords');
 
 // the input slider & display
-let amountInput = document.getElementById('amountInput');
-let amountDisplay = document.getElementById('amountDisplay');
+const amountInput = document.getElementById('amountInput');
+const amountDisplay = document.getElementById('amountDisplay');
 amountInput.value = amountDisplay.textContent = amount;
 
 // the output
-let passwordsOutputOne = document.getElementById('outputOne');
-let passwordsOutputTwo = document.getElementById('outputTwo');
+const passwordsOutputOne = document.getElementById('outputOne');
+const passwordsOutputTwo = document.getElementById('outputTwo');
 // console.log(passwordsOutputOne, passwordsOutputTwo)
 
 // clean slate
