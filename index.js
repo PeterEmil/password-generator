@@ -23,11 +23,6 @@ function clear() {
   passwordsOutputOne.innerHTML = passwordsOutputTwo.innerHTML = ''
 };
 
-// start your engines!
-clear();
-
-// get the buttons to work for us
-
 // generate random passwords using addEventListener
 passwordsButton.addEventListener('click', function () {
   // console.log('it works'); // check
