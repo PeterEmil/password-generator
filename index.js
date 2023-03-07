@@ -75,7 +75,7 @@ amountInput.addEventListener('input', function () {
 });
 
 // get random characters from given array for use in outputs
-function getRandomCharacter(amount) {
+function getRandomCharacter() {
   value = ''; // clear out previous run
   amount = amountInput.value; // get amount from input
   for (let i = 0; i < amount; i++) {
@@ -94,6 +94,6 @@ function showGeneratedPasswords() {
   //   passwordsOutputTwo.textContent += characters[(Math.floor(Math.random() * characters.length))];
   // };
   // cleaner try with getRandomCharacter() function
-  passwordsOutputOne.textContent = getRandomCharacter(amount);
-  passwordsOutputTwo.textContent = getRandomCharacter(amount);
+  passwordsOutputOne.textContent = getRandomCharacter();
+  passwordsOutputTwo.textContent = getRandomCharacter();
 };
