@@ -13,10 +13,9 @@ const amountInput = document.getElementById('amountInput');
 const amountDisplay = document.getElementById('amountDisplay');
 amountInput.value = amountDisplay.textContent = amount;
 
-// the output
+// the outputs
 const passwordsOutputOne = document.getElementById('outputOne');
 const passwordsOutputTwo = document.getElementById('outputTwo');
-// console.log(passwordsOutputOne, passwordsOutputTwo)
 
 // clean slate
 function clear() {
@@ -25,8 +24,6 @@ function clear() {
 
 // generate random passwords using addEventListener
 passwordsButton.addEventListener('click', function () {
-  // console.log('it works'); // check
-  // passwordsOutputOne.textContent = passwordsOutputTwo.textContent = 'it works' // check
   getRandomCharacter();
   showGeneratedPasswords();
 });
@@ -48,19 +45,11 @@ function getRandomCharacter() {
   for (let i = 0; i < amount; i++) {
     password += characters[(Math.floor(Math.random() * characters.length))];
   };
-  // console.log(password); // check
   return password;
 };
 
 // render generated passwords
 function showGeneratedPasswords() {
-  // first try
-  // clear();
-  // for (let i = 0; i < amount; i++) {
-  //   passwordsOutputOne.textContent += characters[(Math.floor(Math.random() * characters.length))];
-  //   passwordsOutputTwo.textContent += characters[(Math.floor(Math.random() * characters.length))];
-  // };
-  // cleaner try with getRandomCharacter() function
   passwordsOutputOne.textContent = getRandomCharacter();
   passwordsOutputTwo.textContent = getRandomCharacter();
 };
