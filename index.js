@@ -3,40 +3,6 @@ const characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 
   '/'];
 let amount = 15;
 
-// // steps for taking random characters from given array:
-// // console a character from the given array using index
-// console.log(characters[0])
-// // 1. console amount of characters in given array
-// console.log(characters.length) // 91
-// // 2. get random number within length of given array
-// console.log(Math.random() * 91) // fixed on certain amount
-// console.log(Math.random() * characters.length) // connected to array - better option
-// // 3. floor to integer
-// console.log(Math.floor(Math.random() * characters.length))
-// // 4. console random character using floored random index
-// console.log(characters[(Math.floor(Math.random() * characters.length))])
-
-// just for muscle memory we create three new arrays to hold characters, numbers and symbols
-// let chars = [];
-// let nums = [];
-// let syms = [];
-// function createSubArrays() {
-//   for (let i = 0; i < characters.length; i++) {
-//     if (i < 52) {
-//       chars += characters[i];
-//     } else if (i > 61) {
-//       syms += characters[i];
-//     } else nums += characters[i];
-//   };
-//   console.log(chars);
-//   console.log(nums);
-//   console.log(syms);
-// };
-
-// createSubArrays();
-
-// Code for use on the HTML
-
 // the buttons
 const passwordsButton = document.getElementById('generatePasswords');
 
@@ -97,3 +63,43 @@ function showGeneratedPasswords() {
   passwordsOutputOne.textContent = getRandomCharacter();
   passwordsOutputTwo.textContent = getRandomCharacter();
 };
+
+
+
+
+
+// ********** Workshop **********
+
+// // steps for taking random characters from given array:
+// // console a character from the given array using index
+// console.log(characters[0])
+// // 1. console amount of characters in given array
+// console.log(characters.length) // 91
+// // 2. get random number within length of given array
+// console.log(Math.random() * 91) // fixed on certain amount
+// console.log(Math.random() * characters.length) // connected to array - better option
+// // 3. floor to integer
+// console.log(Math.floor(Math.random() * characters.length))
+// // 4. console random character using floored random index
+// console.log(characters[(Math.floor(Math.random() * characters.length))])
+
+// just for muscle memory we create three new arrays to hold characters, numbers and symbols
+// let chars = [];
+// let nums = [];
+// let syms = [];
+// function createSubArrays() {
+//   for (let i = 0; i < characters.length; i++) {
+//     if (i < 52) {
+//       chars += characters[i];
+//     } else if (i > 61) {
+//       syms += characters[i];
+//     } else nums += characters[i];
+//   };
+//   console.log(chars);
+//   console.log(nums);
+//   console.log(syms);
+// };
+
+// createSubArrays();
+
+// Code for use on the HTML
