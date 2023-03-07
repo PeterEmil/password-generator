@@ -3,7 +3,7 @@
  * #1C1C1C - black
  * #1F2937 - antracite
  * #2F3E53 - grey
- * #4ADF86 - lightgreen
+ * #3EB581 - lightgreen
  * #FFFFFF - white
  *
  */
@@ -11,6 +11,7 @@
  :root {
     --black: #1C1C1C;
     --white: #EFF9F4;
+    --highlight: #3EB581;
     --borderRadius: 5px;
  }
 
@@ -19,7 +20,7 @@
     :root {
         --backgroundColor-1: var(--black);
         --backgroundColor-2: #1F2937;
-        --highlightColor: #4ADF86;
+        --highlightColor: var(--highlight);
         --textColor: var(--white);
         --borderColor: var(--white);
     }
@@ -29,7 +30,7 @@
     :root {
         --backgroundColor-2: #ECFDF5;
         --backgroundColor-1: #F4FBF8;
-        --highlightColor: #4ADF86;
+        --highlightColor: var(--highlight);
         --textColor: var(--black);
         --borderColor: var(--black);
     }
@@ -108,6 +109,7 @@ button:active {
 output {
     background-color: var(--black);
     color: var(--highlightColor);
+    min-height: 24px;
     width: 100%;
 }
 
