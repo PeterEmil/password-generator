@@ -6,6 +6,7 @@ let password = '';
 
 // the buttons
 const passwordsButton = document.getElementById('generatePasswords');
+const clearButton = document.getElementById('clearPasswords');
 
 // the input slider & display
 const amountInput = document.getElementById('amountInput');
@@ -33,6 +34,11 @@ passwordsButton.addEventListener('click', function () {
   // passwordsOutputOne.textContent = passwordsOutputTwo.textContent = 'it works' // check
   getRandomCharacter();
   showGeneratedPasswords();
+});
+
+// clear passwords using addEventListener
+clearButton.addEventListener('click', function () {
+  clear();
 });
 
 // update amount of characters using range slider
