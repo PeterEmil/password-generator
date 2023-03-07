@@ -24,7 +24,6 @@ function clear() {
 
 // generate random passwords using addEventListener
 passwordsButton.addEventListener('click', function () {
-  generatePasswords();
   showGeneratedPasswords();
 });
 
@@ -45,13 +44,16 @@ function generatePasswords() {
   for (let i = 0; i < passwordLength; i++) {
     password += characters[(Math.floor(Math.random() * characters.length))];
   };
+  console.log(`generatePassword: ${password}`);
   return password;
 };
 
 // render generated passwords
 function showGeneratedPasswords() {
   passwordsOutputOne.textContent = generatePasswords();
+  console.log(`showPassword 1: ${password}`);
   passwordsOutputTwo.textContent = generatePasswords();
+  console.log(`showPassword 2: ${password}`);
 };
 
 
