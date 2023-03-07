@@ -1,7 +1,7 @@
 // the given array
 const characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', ',', '|', ':', ';', '<', '>', '.', '?',
   '/'];
-let amount = 15;
+let passwordLength = 15;
 let password = '';
 
 // the buttons
@@ -11,7 +11,7 @@ const clearButton = document.getElementById('clearPasswords');
 // the input slider & display
 const amountInput = document.getElementById('amountInput');
 const amountDisplay = document.getElementById('amountDisplay');
-amountInput.value = amountDisplay.textContent = amount;
+amountInput.value = amountDisplay.textContent = passwordLength;
 
 // the outputs
 const passwordsOutputOne = document.getElementById('outputOne');
@@ -41,8 +41,8 @@ amountInput.addEventListener('input', function () {
 // get random characters from given array for use in outputs
 function generatePasswords() {
   password = ''; // clear out previous run
-  amount = amountInput.value; // get amount from input
-  for (let i = 0; i < amount; i++) {
+  passwordLength = amountInput.value; // get amount from input
+  for (let i = 0; i < passwordLength; i++) {
     password += characters[(Math.floor(Math.random() * characters.length))];
   };
   return password;
