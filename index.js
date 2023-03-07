@@ -23,14 +23,10 @@ function clear() {
 };
 
 // generate random passwords using addEventListener
-passwordsButton.addEventListener('click', function () {
-  showGeneratedPasswords();
-});
+passwordsButton.addEventListener('click', showGeneratedPasswords);
 
 // clear passwords using addEventListener
-clearButton.addEventListener('click', function () {
-  clear();
-});
+clearButton.addEventListener('click', clear);
 
 // update amount of characters using range slider
 amountInput.addEventListener('input', function () {
