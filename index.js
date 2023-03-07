@@ -17,23 +17,23 @@ let amount = 15;
 // console.log(characters[(Math.floor(Math.random() * characters.length))])
 
 // just for muscle memory we create three new arrays to hold characters, numbers and symbols
-let chars = [];
-let nums = [];
-let syms = [];
-function createSubArrays() {
-  for (let i = 0; i < characters.length; i++) {
-    if (i < 52) {
-      chars += characters[i];
-    } else if (i > 61) {
-      syms += characters[i];
-    } else nums += characters[i];
-  };
-  console.log(chars);
-  console.log(nums);
-  console.log(syms);
-};
+// let chars = [];
+// let nums = [];
+// let syms = [];
+// function createSubArrays() {
+//   for (let i = 0; i < characters.length; i++) {
+//     if (i < 52) {
+//       chars += characters[i];
+//     } else if (i > 61) {
+//       syms += characters[i];
+//     } else nums += characters[i];
+//   };
+//   console.log(chars);
+//   console.log(nums);
+//   console.log(syms);
+// };
 
-createSubArrays();
+// createSubArrays();
 
 // Code for use on the HTML
 
