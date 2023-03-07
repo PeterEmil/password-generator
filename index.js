@@ -2,6 +2,7 @@
 const characters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', ',', '|', ':', ';', '<', '>', '.', '?',
   '/'];
 let amount = 15;
+let password = '';
 
 // the buttons
 const passwordsButton = document.getElementById('generatePasswords');
@@ -18,8 +19,7 @@ const passwordsOutputTwo = document.getElementById('outputTwo');
 
 // clean slate
 function clear() {
-  value = '';
-  passwordsOutputOne.innerHTML = passwordsOutputTwo.innerHTML = '&nbsp;'
+  passwordsOutputOne.innerHTML = passwordsOutputTwo.innerHTML = ''
 };
 
 // start your engines!
@@ -42,13 +42,13 @@ amountInput.addEventListener('input', function () {
 
 // get random characters from given array for use in outputs
 function getRandomCharacter() {
-  value = ''; // clear out previous run
+  password = ''; // clear out previous run
   amount = amountInput.value; // get amount from input
   for (let i = 0; i < amount; i++) {
-    value += characters[(Math.floor(Math.random() * characters.length))];
+    password += characters[(Math.floor(Math.random() * characters.length))];
   };
-  // console.log(value); // check
-  return value;
+  // console.log(password); // check
+  return password;
 };
 
 // render generated passwords
